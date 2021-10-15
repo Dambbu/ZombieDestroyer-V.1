@@ -2,6 +2,8 @@
 from typing import no_type_check
 import pygame
 import random
+
+from pygame.constants import KEYDOWN
 #Game Control 
 screen_width = 1200
 screen_height = 700
@@ -15,6 +17,13 @@ class Zombie:
         self.speed = speed
         self.isXForward = True
         self.isYForward = True
+
+class Bullet:
+    def __init__(self, x,y, speed):
+        self.x = x
+        self.y = y
+        self.speed = speed
+
 
 def moveZombieByKeyboard(zombie:Zombie):
     pass
@@ -88,12 +97,24 @@ def main():
 
     player1X =0
     player1Y =0
-    bullet1X =0
-    bullet1Y =0
-    bulletFlag = False
+
+    bulletList = []
+    keypressed = False
 
     # main loop
     while running:
+
+        keypressed = False
+
+        # event handling, gets all event from the event queue
+        for event in pygame.event.get():
+            # only do something if the event is of type QUIT
+            if event.type == pygame.QUIT:
+                # change the value to False, to exit the main loop
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                keypressed = True
+
         screen.blit(bg, (0,0))
 
         #move all the zombies automatically
@@ -119,27 +140,21 @@ def main():
             player1Y = screen_height - 80
         if player1Y < 0:
             player1Y = 0
-            #move bullet location.
-        if keys[pygame.K_SPACE]:
-            bulletFlag = True
-            bullet1X = player1X    
-            bullet1Y = player1Y
-        if bulletFlag == True:
-            bullet1X = bullet1X + bulletSpeed
 
 
         screen.blit(player1, (player1X, player1Y))
-        screen.blit(bullet1, (bullet1X, bullet1Y))
-
         
 
+        #move bullet location.
+        if keys[pygame.K_SPACE] and keypressed:
+            bulletList.append( Bullet(player1X, player1Y, 4) )
+
+        for bullet in bulletList:
+            screen.blit(bullet1, (bullet.x, bullet.y))
+            bullet.x = bullet.x + bullet.speed
+            if bullet.x > screen_width:
+                bulletList.remove(bullet)
         
-        # event handling, gets all event from the event queue
-        for event in pygame.event.get():
-            # only do something if the event is of type QUIT
-            if event.type == pygame.QUIT:
-                # change the value to False, to exit the main loop
-                running = False
 
         pygame.display.update()
      
