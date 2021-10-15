@@ -8,7 +8,7 @@ from pygame.constants import KEYDOWN
 screen_width = 1200
 screen_height = 700
 playerSpeed = 10
-bulletSpeed = 2
+bulletSpeed = 4
 
 class Zombie:
     def __init__(self, x, y, speed):
@@ -147,7 +147,7 @@ def main():
 
         #move bullet location.
         if keys[pygame.K_SPACE] and keypressed:
-            bulletList.append( Bullet(player1X, player1Y, 4) )
+            bulletList.append( Bullet(player1X, player1Y, bulletSpeed) )
 
         for bullet in bulletList:
             screen.blit(bullet1, (bullet.x, bullet.y))
