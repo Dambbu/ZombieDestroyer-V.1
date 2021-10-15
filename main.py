@@ -10,8 +10,8 @@ screen_width = 1200
 screen_height = 700
 playerSpeed = 10
 bulletSpeed = 4
-bulletDamage = 0.5
-zombieHP = 6
+bulletDamage = 2
+zombieHP = 8
 
 class Zombie:
     def __init__(self, x, y, speed, hp):
