@@ -68,7 +68,7 @@ def checkCollision(bullet:Bullet, zombies:list[Zombie]):
 
     for zombie in zombies:
         distance =  math.sqrt((bullet.x - zombie.x)*(bullet.x - zombie.x) + (bullet.y - zombie.y)*(bullet.y - zombie.y))
-        if distance < 10:
+        if distance < 30:
             zombie.hp = zombie.hp - bullet.damage
             return True
 
