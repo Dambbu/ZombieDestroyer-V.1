@@ -8,7 +8,7 @@ from pygame.constants import KEYDOWN
 #Game Control 
 screen_width = 1200
 screen_height = 700
-playerSpeed = 10
+playerSpeed = 5
 bulletSpeed = 4
 bulletDamage = 2
 zombieHP = 8
@@ -68,7 +68,7 @@ def checkCollision(bullet:Bullet, zombies:list[Zombie]):
 
     for zombie in zombies:
         distance =  math.sqrt((bullet.x - zombie.x)*(bullet.x - zombie.x) + (bullet.y - zombie.y)*(bullet.y - zombie.y))
-        if distance < 30:
+        if distance < 40:
             zombie.hp = zombie.hp - bullet.damage
             return True
 
