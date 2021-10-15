@@ -2,6 +2,7 @@
 from typing import no_type_check
 import pygame
 import random
+import math
 
 from pygame.constants import KEYDOWN
 #Game Control 
@@ -9,19 +10,23 @@ screen_width = 1200
 screen_height = 700
 playerSpeed = 10
 bulletSpeed = 4
+bulletDamage = 0.5
+zombieHP = 6
 
 class Zombie:
-    def __init__(self, x, y, speed):
+    def __init__(self, x, y, speed, hp):
         self.x = x
         self.y = y
+        self.hp=hp
         self.speed = speed
         self.isXForward = True
         self.isYForward = True
 
 class Bullet:
-    def __init__(self, x,y, speed):
+    def __init__(self, x,y, speed, damage):
         self.x = x
         self.y = y
+        self.damage = damage
         self.speed = speed
 
 
@@ -54,12 +59,22 @@ def moveZombieAuto(zombie:Zombie):
     #     zombie.y = zombie.y - zombie.speed
 
 def printZombie(screen, img, imgFlipped, zombie):
-    
     if zombie.isXForward == True:
         screen.blit(img, (zombie.x, zombie.y))
     else:    
         screen.blit(imgFlipped, (zombie.x, zombie.y)) 
 
+def checkCollision(bullet:Bullet, zombies:list[Zombie]):
+
+    for zombie in zombies:
+        distance =  math.sqrt((bullet.x - zombie.x)*(bullet.x - zombie.x) + (bullet.y - zombie.y)*(bullet.y - zombie.y))
+        if distance < 10:
+            zombie.hp = zombie.hp - bullet.damage
+            return True
+
+    return False
+    
+        
     
 # define a main function
 def main():
@@ -91,7 +106,7 @@ def main():
 
     zombies = list()
     for i in range(0,2):
-        zombie = Zombie(screen_width+random.randint(0,100), random.randint(50,screen_height-100), random.randint(1,1))
+        zombie = Zombie(screen_width+random.randint(0,100), random.randint(50,screen_height-100), random.randint(1,1), zombieHP )
         zombies.append(zombie)
 
 
@@ -119,8 +134,11 @@ def main():
 
         #move all the zombies automatically
         for zombie in zombies:
-            moveZombieAuto(zombie)
-            printZombie(screen, zombie1, zombie1Flipped, zombie)
+            if zombie.hp <= 0:
+                zombies.remove(zombie)
+            else:    
+                moveZombieAuto(zombie)
+                printZombie(screen, zombie1, zombie1Flipped, zombie)
 
         #move a player character by keyboard
         keys=pygame.key.get_pressed()
@@ -147,13 +165,17 @@ def main():
 
         #move bullet location.
         if keys[pygame.K_SPACE] and keypressed:
-            bulletList.append( Bullet(player1X, player1Y, bulletSpeed) )
+            bulletList.append( Bullet(player1X, player1Y, bulletSpeed, bulletDamage) )
 
         for bullet in bulletList:
-            screen.blit(bullet1, (bullet.x, bullet.y))
-            bullet.x = bullet.x + bullet.speed
-            if bullet.x > screen_width:
+
+            if checkCollision(bullet, zombies) == True:
                 bulletList.remove(bullet)
+            else:
+                screen.blit(bullet1, (bullet.x, bullet.y))
+                bullet.x = bullet.x + bullet.speed
+                if bullet.x > screen_width:
+                    bulletList.remove(bullet)
         
 
         pygame.display.update()
