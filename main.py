@@ -124,13 +124,13 @@ def main():
 
         #move a player character by keyboard
         keys=pygame.key.get_pressed()
-        if keys[pygame.K_a]:
+        if keys[pygame.K_LEFT]:
             player1X = player1X - playerSpeed
-        if keys[pygame.K_d]:
+        if keys[pygame.K_RIGHT]:
             player1X = player1X + playerSpeed
-        if keys[pygame.K_w]:
+        if keys[pygame.K_UP]:
             player1Y = player1Y - playerSpeed
-        if keys[pygame.K_s]:
+        if keys[pygame.K_DOWN]:
             player1Y = player1Y + playerSpeed
         if player1X < 0:
             player1X = 0
