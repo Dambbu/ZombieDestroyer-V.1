@@ -105,7 +105,7 @@ def main():
 
 
     zombies = list()
-    for i in range(0,2):
+    for i in range(0,4):
         zombie = Zombie(screen_width+random.randint(0,100), random.randint(50,screen_height-100), random.randint(1,1), zombieHP )
         zombies.append(zombie)
 
