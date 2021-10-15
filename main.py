@@ -133,6 +133,11 @@ def main():
         screen.blit(bg, (0,0))
 
         #move all the zombies automatically
+        if len(zombies) < 5:
+            zombie = Zombie(screen_width+random.randint(0,100), random.randint(50,screen_height-100), random.randint(1,1), zombieHP )
+            zombies.append(zombie)
+
+
         for zombie in zombies:
             if zombie.hp <= 0:
                 zombies.remove(zombie)
