@@ -8,7 +8,7 @@ from pygame.constants import KEYDOWN
 #Game Control 
 screen_width = 1200
 screen_height = 700
-playerSpeed = 3
+playerSpeed = 5
 bulletSpeed = 4
 bulletDamage = 2
 zombieHP = 8
