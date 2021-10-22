@@ -98,15 +98,12 @@ def main():
     zombie1 = pygame.transform.scale(zombie1, (60, 60))
     zombie1Flipped = pygame.transform.flip(zombie1, True, False)
 
-<<<<<<< Updated upstream
-=======
 
     pygame.font.init() # you have to call this at the start, 
                    # if you want to use this module.
     myfont = pygame.font.SysFont('Phosphate', 30)
 
 
->>>>>>> Stashed changes
     #pygame.display.set_icon(logo) 
     pygame.display.set_caption("minimal program")
 
@@ -122,18 +119,6 @@ def main():
         zombie = Zombie(screen_width+random.randint(0,100), random.randint(50,screen_height-100), random.randint(1,1), zombieHP )
         zombies.append(zombie)
     
-    for bullet in bulletDamage:
-        # get a list of zombies that are hit
-        zombie = pygame.sprite.spritecollide(bullet, zombieHP, False)
-
-    # for each of those zombies
-    for z in zombies:
-        z.hp -= 1         # reduce the health of that very zombie
-        bullet.kill()
-        if z.hp <= 0:     # and if the health is <= 0
-            z.kill()      # remove it 
-            score += 100  # and get some points
-
 
     player1X =0
     player1Y =0
