@@ -103,7 +103,9 @@ def main():
     zombie1Gif = GIFImage("zombie1.gif")
     zombie1Gif.set_scale(0.05)
 
-
+    player1Gif = GIFImage("LVL1 Archer Shooting.gif")
+    player1Gif.set_scale(0.05)
+    
     pygame.font.init() # you have to call this at the start, 
                    # if you want to use this module.
     myfont = pygame.font.SysFont('Phosphate', 30)
