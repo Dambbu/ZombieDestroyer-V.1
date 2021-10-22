@@ -12,6 +12,8 @@ playerSpeed = 3
 bulletSpeed = 4
 bulletDamage = 2
 zombieHP = 8
+score= 0
+
 
 class Zombie:
     def __init__(self, x, y, speed, hp):
@@ -93,7 +95,6 @@ def main():
     zombie1 = pygame.transform.scale(zombie1, (60, 60))
     zombie1Flipped = pygame.transform.flip(zombie1, True, False)
 
-
     #pygame.display.set_icon(logo) 
     pygame.display.set_caption("minimal program")
 
@@ -111,7 +112,7 @@ def main():
     
     for bullet in bulletDamage:
         # get a list of zombies that are hit
-    zombie = pygame.sprite.spritecollide(bullet, zombieHP, False)
+        zombie = pygame.sprite.spritecollide(bullet, zombieHP, False)
 
     # for each of those zombies
     for z in zombies:
