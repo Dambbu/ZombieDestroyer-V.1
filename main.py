@@ -80,6 +80,9 @@ def checkCollision(bullet:Bullet, zombies:list[Zombie]):
     
 # define a main function
 def main():
+
+    score =0
+
     # initialize the pygame module
     pygame.init()
     # load and set the logo
@@ -95,6 +98,15 @@ def main():
     zombie1 = pygame.transform.scale(zombie1, (60, 60))
     zombie1Flipped = pygame.transform.flip(zombie1, True, False)
 
+<<<<<<< Updated upstream
+=======
+
+    pygame.font.init() # you have to call this at the start, 
+                   # if you want to use this module.
+    myfont = pygame.font.SysFont('Phosphate', 30)
+
+
+>>>>>>> Stashed changes
     #pygame.display.set_icon(logo) 
     pygame.display.set_caption("minimal program")
 
@@ -154,6 +166,7 @@ def main():
         for zombie in zombies:
             if zombie.hp <= 0:
                 zombies.remove(zombie)
+                score = score + 1
             else:    
                 moveZombieAuto(zombie)
                 printZombie(screen, zombie1, zombie1Flipped, zombie)
@@ -196,6 +209,10 @@ def main():
                     bulletList.remove(bullet)
         
 
+
+        textsurface = myfont.render("score:"+str(score), False, (0, 0, 0))
+        screen.blit(textsurface,(0,0))
+        
         pygame.display.update()
      
      
