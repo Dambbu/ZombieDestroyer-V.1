@@ -104,8 +104,8 @@ def main():
     zombie1Gif.set_scale(0.05)
 
     player1Gif = GIFImage("LVL1 Archer Shooting.gif")
-    player1Gif.set_scale(0.05)
-    
+    player1Gif.set_scale(0.15)
+
     pygame.font.init() # you have to call this at the start, 
                    # if you want to use this module.
     myfont = pygame.font.SysFont('Phosphate', 30)
@@ -132,6 +132,8 @@ def main():
 
     bulletList = []
     keypressed = False
+    bulletFired = False
+    bulletAnimationCount = 0
 
     # main loop
     while running:
@@ -183,12 +185,23 @@ def main():
             player1Y = 0
 
 
-        screen.blit(player1, (player1X, player1Y))
-        
-
         #move bullet location.
+        #if space bar is pressed, print out gif image, otherwise print out static image
         if keys[pygame.K_SPACE] and keypressed:
             bulletList.append( Bullet(player1X, player1Y, bulletSpeed, bulletDamage) )
+            bulletFired = True
+            bulletAnimationCount = 0
+            player1Gif.seek(0)
+        
+
+        if bulletFired == True:
+            player1Gif.render(screen, (player1X, player1Y))
+            bulletAnimationCount = bulletAnimationCount + 1
+
+            if bulletAnimationCount > 105:
+                bulletFired = False
+        else:
+            screen.blit(player1, (player1X, player1Y))
 
         for bullet in bulletList:
 
