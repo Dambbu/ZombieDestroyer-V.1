@@ -3,6 +3,7 @@ from typing import no_type_check
 import pygame
 import random
 import math
+from GIFImage import GIFImage
 
 from pygame.constants import KEYDOWN
 #Game Control 
@@ -60,11 +61,12 @@ def moveZombieAuto(zombie:Zombie):
     # else:
     #     zombie.y = zombie.y - zombie.speed
 
-def printZombie(screen, img, imgFlipped, zombie):
+def printZombie(screen, gifImg, zombie):
+
     if zombie.isXForward == True:
-        screen.blit(img, (zombie.x, zombie.y))
+        gifImg.render(screen, (zombie.x, zombie.y))
     else:    
-        screen.blit(imgFlipped, (zombie.x, zombie.y)) 
+        gifImg.render(screen, (zombie.x, zombie.y))
 
 def checkCollision(bullet:Bullet, zombies:list[Zombie]):
 
@@ -97,6 +99,9 @@ def main():
     zombie1 = pygame.image.load("zombie1.gif")
     zombie1 = pygame.transform.scale(zombie1, (60, 60))
     zombie1Flipped = pygame.transform.flip(zombie1, True, False)
+
+    zombie1Gif = GIFImage("zombie1.gif")
+    zombie1Gif.set_scale(0.05)
 
 
     pygame.font.init() # you have to call this at the start, 
@@ -154,7 +159,7 @@ def main():
                 score = score + 1
             else:    
                 moveZombieAuto(zombie)
-                printZombie(screen, zombie1, zombie1Flipped, zombie)
+                printZombie(screen, zombie1Gif, zombie)
 
         #move a player character by keyboard
         keys=pygame.key.get_pressed()
