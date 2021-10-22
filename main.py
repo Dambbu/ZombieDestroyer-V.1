@@ -108,6 +108,18 @@ def main():
     for i in range(0,4):
         zombie = Zombie(screen_width+random.randint(0,100), random.randint(50,screen_height-100), random.randint(1,1), zombieHP )
         zombies.append(zombie)
+    
+    for bullet in bulletDamage:
+        # get a list of zombies that are hit
+    zombie = pygame.sprite.spritecollide(bullet, zombieHP, False)
+
+    # for each of those zombies
+    for z in zombies:
+        z.hp -= 1         # reduce the health of that very zombie
+        bullet.kill()
+        if z.hp <= 0:     # and if the health is <= 0
+            z.kill()      # remove it 
+            score += 100  # and get some points
 
 
     player1X =0
