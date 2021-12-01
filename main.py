@@ -9,12 +9,11 @@ from pygame.constants import KEYDOWN
 #Game Control 
 screen_width = 1200
 screen_height = 700
-playerSpeed = 5
-bulletSpeed = 4
-bulletDamage = 2
-zombieHP = 8
+playerSpeed = 6
+bulletSpeed = 5
+bulletDamage = 3
+zombieHP = 9
 score= 0
-
 
 class Zombie:
     def __init__(self, x, y, speed, hp):
@@ -95,7 +94,7 @@ def main():
     player1 = pygame.transform.scale(player1, (150, 80))
     player1Flipped = pygame.transform.flip(player1, True, False)
     bullet1 = pygame.image.load("ArrowLvl1.gif")
-    bullet1 = pygame.transform.scale(bullet1, (20, 50))
+    bullet1 = pygame.transform.scale(bullet1, (30, 60))
     zombie1 = pygame.image.load("zombie1.gif")
     zombie1 = pygame.transform.scale(zombie1, (60, 60))
     zombie1Flipped = pygame.transform.flip(zombie1, True, False)
