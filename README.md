@@ -40,33 +40,49 @@ See Damage increase at ##Zombies.
 # (C) Pro's Set of Armour (µ200): +80 HP
 
 ### Base (Player Skin changes for every single base!)
-# (V) The Craker (µ90): 105 HP
-# (B) The Ninja (µ100): 110 HP
-# (N) The Warrior (µ130): 115 HP
-# (M) The Magician (µ150): 120 HP
-# (J) The Berserker (µ200): 135 HP
-# (K) Kamakazier (µ300): 150 HP
-# (L) The Tank (µ350): 175 HP
-# (Q) The Viking (µ400): 200 HP
+# (V) The Craker (µ90): 105 HP, 8 Speed
+# (B) The Ninja (µ100): 110 HP, 9 Speed
+# (N) The Warrior (µ130): 115 HP, 8 Speed
+# (M) The Magician (µ150): 120 HP, 10 Speed
+# (J) The Berserker (µ200): 135 HP, 11 Speed
+# (K) Kamakazier (µ300): 150 HP, 14 Speed
+# (L) The Tank (µ350): 175 HP, 4 Speed
+# (Q) The Viking (µ400): 200 HP, 16 Speed
 
 ### Zombies
 ## Boses: Bosses per levles (30 hp), +1 per 5 levels
 ## Zombie Types: 
-# Type 1: 3 Hp, 6 Speed
-# Type 2: 9 Hp, 4 Speed
-# Type 3: 12 Hp, 5 Speed
-# Type 4: 16 Hp, 7 Speed
-# Type Boss 1: 30 Hp (every 5 lvls)
-# Type Boss 2: 45 Hp (every 10 lvls)
-# Type Boss 3: 60 Hp (every 15 lvls)
-# Type Mega Boss 1: 100 Hp (every 30 lvls)
-# Type Mega Boss 2: 150 Hp (every 45 lvls)
+# Type 1 (µ1): 3 Hp, 6 Speed
+# Type 2 (µ3): 9 Hp, 4 Speed
+# Type 3 (µ5): 12 Hp, 5 Speed
+# Type 4 (µ10): 16 Hp, 7 Speed
+# Type Boss 1 (µ20): 30 Hp, 6 Speed
+# Type Boss 2 (µ30): 45 Hp, 6 Speed
+# Type Boss 3 (µ45): 60 Hp, 5 Speed
+# Type Mega Boss 1 (µ80): 100 Hp, 5 Speed
+# Type Mega Boss 2 (µ130): 150 Hp, 4 Speed
+# Type Heavy Boss 1 (µ280): 300 Hp, 4 Speed
+# Type Extreme Heavy Boss 1 (µ780): 800 Hp , 3 Speed
+# Type Fast Boss 1 (µ80): 100 hp, 6 Speed
 # Lvl 1: T1 (20)
 # Lvl 2: T1 (15), T2 (5)
 # Lvl 3: T1 (15), T2 (10), T3 (5), T4 (1)
-# Infinite Lvl: Add +5 T1, +5 T2, +5 T3, +5 T4,
+# Infinite Lvl: 
+#   T1: +10 per lvl
+#   T2: +8 per lvl
+#   T3: +7 per lvl
+#   T4: +6 per lvl
 #   TB1: +1 Per 5 lvls
 #   TB2: +1 Per 10 lvls
 #   TB3: +1 Per 10 lvls
 #   TMB1: +1 15 lvls
 #   TMB2: +2 18 lvls
+#   THB1: +1 
+#   TEHB1: +1 20 lvls
+#   TFB1: +1 13 lvls
+
+
+
+Roles: 
+Joshua: Guns, Healing Items, Bullets
+Joonseo: Zombies(money), Base, Armour
