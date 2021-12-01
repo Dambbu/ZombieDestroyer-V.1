@@ -94,7 +94,7 @@ def main():
     player1 = pygame.transform.scale(player1, (150, 80))
     player1Flipped = pygame.transform.flip(player1, True, False)
     bullet1 = pygame.image.load("ArrowLvl1.gif")
-    bullet1 = pygame.transform.scale(bullet1, (30, 60))
+    bullet1 = pygame.transform.scale(bullet1, (40, 70))
     zombie1 = pygame.image.load("zombie1.gif")
     zombie1 = pygame.transform.scale(zombie1, (60, 60))
     zombie1Flipped = pygame.transform.flip(zombie1, True, False)
