@@ -12,7 +12,7 @@ See Damage increase at ##Zombies.
 ### Levels: There will be 3 basic levels. More to come soon!
 # Lvl 1: Character will be Archer (Long range). Total Available Coins: µ15       Total Zombies: 15
 # Lvl 2: Character will be Mace Man (Fast Moving Melee Tank). Total Available Coins: µ25  Total Zombies: 25
-# Lvl 3: Character will be Hangunner (Fast, Accurate Beginner Berserker). Total Available Coins: µ35 Total Zombies: 45
+# Lvl 3: Character will be Hangunner (Fast, Accurate Beginner Berserker). Total Available Coins: µ45 Total Zombies: 45
 # After Levels: Forever, +5 Zombies per level (µ1 per zombie for the first 10 Lvls, then µ2 for the next ten, so on.). +1 Boss per level. Shop will be avilable
 ### Shop
 ** Shop can be accessed after Lvl. 3 is completed. 
@@ -38,6 +38,7 @@ See Damage increase at ##Zombies.
 # (Z) Basic Set of Armour (µ80): +15 HP
 # (X) Noob's Set of Armour (µ100): +30 HP
 # (C) Pro's Set of Armour (µ200): +80 HP
+
 ### Base (Player Skin changes for every single base!)
 # (V) The Craker (µ90): 105 HP
 # (B) The Ninja (µ100): 110 HP
@@ -47,3 +48,25 @@ See Damage increase at ##Zombies.
 # (K) Kamakazier (µ300): 150 HP
 # (L) The Tank (µ350): 175 HP
 # (Q) The Viking (µ400): 200 HP
+
+### Zombies
+## Boses: Bosses per levles (30 hp), +1 per 5 levels
+## Zombie Types: 
+# Type 1: 3 Hp, 6 Speed
+# Type 2: 9 Hp, 4 Speed
+# Type 3: 12 Hp, 5 Speed
+# Type 4: 16 Hp, 7 Speed
+# Type Boss 1: 30 Hp (every 5 lvls)
+# Type Boss 2: 45 Hp (every 10 lvls)
+# Type Boss 3: 60 Hp (every 15 lvls)
+# Type Mega Boss 1: 100 Hp (every 30 lvls)
+# Type Mega Boss 2: 150 Hp (every 45 lvls)
+# Lvl 1: T1 (20)
+# Lvl 2: T1 (15), T2 (5)
+# Lvl 3: T1 (15), T2 (10), T3 (5), T4 (1)
+# Infinite Lvl: Add +5 T1, +5 T2, +5 T3, +5 T4,
+#   TB1: +1 Per 5 lvls
+#   TB2: +1 Per 10 lvls
+#   TB3: +1 Per 10 lvls
+#   TMB1: +1 15 lvls
+#   TMB2: +2 18 lvls
