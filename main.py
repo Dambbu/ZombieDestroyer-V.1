@@ -4,6 +4,7 @@ import pygame
 import random
 import math
 from GIFImage import GIFImage
+import Base
 
 from pygame.constants import KEYDOWN
 #Game Control 
@@ -14,6 +15,7 @@ bulletSpeed = 5
 bulletDamage = 3
 zombieHP = 9
 score= 0
+
 
 class Zombie:
     def __init__(self, x, y, speed, hp):

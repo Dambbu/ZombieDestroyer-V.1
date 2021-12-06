@@ -1,7 +1,7 @@
 class Gun:
-    def __init__(self, dmg, amo, delay):
-        self.dmg = dmg
-        self.amo = amo
+    def __init__(self, damage, ammo, delay):
+        self.damage = damage
+        self.ammo = ammo
         self.delay = delay
 
 

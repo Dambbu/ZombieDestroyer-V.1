@@ -1,5 +1,6 @@
 class Heal:
     def __init__(self, hp):
+        self.type = type
         self.hp = hp
 
 heal1 = Heal(15)
