@@ -10,6 +10,10 @@ p1 = Lvl("Lvl 1", 1, 20, 20)
 p2 = Lvl("Lvl 2", 1/2, 15/5, 30)
 p3 = Lvl("Lvl 3", 1/2, 15/10, 45)
 
+instances = [p1,p2,p3]
+for instance in instances: 
+    print(str(instance.type) + "," + instance.lvl + "," + instance.zombies + "," + instance.coins)
+
 
 
 
