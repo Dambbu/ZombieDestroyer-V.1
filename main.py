@@ -5,6 +5,11 @@ import random
 import math
 from GIFImage import GIFImage
 import Base
+import Zombie
+import Bullet
+import Gun
+import Armour
+import Heal
 
 from pygame.constants import KEYDOWN
 #Game Control 
@@ -27,11 +32,38 @@ class Zombie:
         self.isYForward = True
 
 class Bullet:
-    def __init__(self, x,y, speed, damage):
+    def __init__(self, x, y, speed, damage):
         self.x = x
         self.y = y
         self.damage = damage
         self.speed = speed
+
+class Base: 
+    def __init__(self, type, hp, speed):
+        self.type = type
+        self.hp = hp
+        self.speed = speed
+
+class Armour:
+    def __init__(self, type, hp):
+        self.type = type
+        self.hp = hp
+
+class Heal:
+    def __init__(type, self, hp):
+        self.type = type
+        self.hp = hp 
+    #Needs to be fixed (?): How to add/regen HP
+
+class Gun: 
+    def __init__(self, damage, ammo, delay):
+        self.damage = damage
+        self.ammo = ammo
+        self.delay = delay
+
+
+
+    
 
 
 def moveZombieByKeyboard(zombie:Zombie):

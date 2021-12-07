@@ -12,3 +12,7 @@ gun4 = Gun(10, 70, 10000)
 gun5 = Gun(40, 3, 15000)
 gun6 = Gun(100,1, 13000)
 gun7 = Gun(150, 10, 14000)
+
+instances = [gun1,gun2,gun3,gun4,gun5,gun6,gun7]
+for instance in instances: 
+    print(str(instance.type) + "," + instance.damage + "," + instance.delay + "," + instance.ammo)

@@ -13,8 +13,8 @@ p5 = Base("The Berserker", 135, 11)
 p6 = Base("Kamakazier", 150, 14)
 p7 = Base("The Tank ", 175, 4)
 p8 = Base("The Viking", 200, 16)
-instances = [p1,p2,p3,p4,p5,p6,p7,p8]
 
+instances = [p1,p2,p3,p4,p5,p6,p7,p8]
 for instance in instances: 
     print(str(instance.type) + "," + instance.hp + "," + instance.speed )
 

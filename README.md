@@ -1,5 +1,5 @@
 #ZomBusters Game
-ZomBusters is credited to: @Dambbu, @ joshuasukwooyun
+ZomBusters is credited to: @Dambbu, @ joshuasukwooyun, and @kduhyun
 ZomBusters is a one player Zombie Shooter Game, with game controls down below. 
 ###***PLEASE PLEASE READ THE SHOP FOR INSTRUCTIONS AND NUMBERS OR LETTERS TO BUY FROM SHOP!!!!
 The goal of the game is to survive as many rounds as possible and not let the zombies pass the line. -5 HP at a 20 HP Base (line).
@@ -12,7 +12,7 @@ See Damage increase at ##Zombies.
 ### Levels: There will be 3 basic levels. More to come soon!
 # Lvl 1: Character will be Archer (Long range). Total Available Coins: µ15       Total Zombies: 15
 # Lvl 2: Character will be Mace Man (Fast Moving Melee Tank). Total Available Coins: µ25  Total Zombies: 25
-# Lvl 3: Character will be Hangunner (Fast, Accurate Beginner Berserker). Total Available Coins: µ45 Total Zombies: 45
+# Lvl 3: Character will be Handgunner (Fast, Accurate Beginner Berserker). Total Available Coins: µ45 Total Zombies: 45
 # After Levels: Forever, +5 Zombies per level (µ1 per zombie for the first 10 Lvls, then µ2 for the next ten, so on.). +1 Boss per level. Shop will be avilable
 ### Shop
 ** Shop can be accessed after Lvl. 3 is completed. 

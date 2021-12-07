@@ -1,4 +1,3 @@
-
 #Class Zombie
 class Zombie:
     def __init__(self, type, hp, speed, money):
