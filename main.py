@@ -6,7 +6,7 @@ from GIFImage import GIFImage
 import Base
 from Zombie import Zombie
 from ZombieType import ZombieType
-
+from Player import Player
 import Bullet
 import Gun
 import Armour
@@ -19,7 +19,6 @@ screen_height = 700
 playerSpeed = 6
 bulletSpeed = 5
 bulletDamage = 3
-score= 0
 
 z1 = ZombieType("zombie1", 3, 6, 1)
 z2 = ZombieType("zombie2", 9, 4, 3)
@@ -93,7 +92,7 @@ def checkCollision(bullet:Bullet, zombies:list[Zombie]):
 # define a main function
 def main():
 
-    score =0
+    player = Player()
 
     # initialize the pygame module
     pygame.init()
@@ -140,10 +139,6 @@ def main():
         #  type, hp, speed, money):
         zombie = Zombie(z1, screen_width+random.randint(0,100), random.randint(50,screen_height-100))
         zombies.append(zombie)
-    
-
-    player1X =0
-    player1Y =0
 
     bulletList = []
     keypressed = False
@@ -175,7 +170,7 @@ def main():
         for zombie in zombies:
             if zombie.hp <= 0:
                 zombies.remove(zombie)
-                score = score + 1
+                player.score = player.score + 1
             else:    
                 moveZombieAuto(zombie)
                 if zombie.zombieImageName == "zombie1":
@@ -187,40 +182,40 @@ def main():
         #move a player character by keyboard
         keys=pygame.key.get_pressed()
         if keys[pygame.K_LEFT]:
-            player1X = player1X - playerSpeed
+            player.x = player.x - playerSpeed
         if keys[pygame.K_RIGHT]:
-            player1X = player1X + playerSpeed
+            player.x = player.x + playerSpeed
         if keys[pygame.K_UP]:
-            player1Y = player1Y - playerSpeed
+            player.y = player.y - playerSpeed
         if keys[pygame.K_DOWN]:
-            player1Y = player1Y + playerSpeed
-        if player1X < 0:
-            player1X = 0
-        if player1X > screen_width - 80:
-            player1X = screen_width - 80
-        if player1Y > screen_height - 80:
-            player1Y = screen_height - 80
-        if player1Y < 0:
-            player1Y = 0
+            player.y = player.y + playerSpeed
+        if player.x < 0:
+            player.x = 0
+        if player.x > screen_width - 80:
+            player.x = screen_width - 80
+        if player.y > screen_height - 80:
+            player.y = screen_height - 80
+        if player.y < 0:
+            player.y = 0
 
 
         #move bullet location.
         #if space bar is pressed, print out gif image, otherwise print out static image
         if keys[pygame.K_SPACE] and keypressed:
-            bulletList.append( Bullet(player1X, player1Y, bulletSpeed, bulletDamage) )
+            bulletList.append( Bullet(player.x, player.y, bulletSpeed, bulletDamage) )
             bulletFired = True
             bulletAnimationCount = 0
             player1Gif.seek(0)
         
 
         if bulletFired == True:
-            player1Gif.render(screen, (player1X, player1Y))
+            player1Gif.render(screen, (player.x, player.y))
             bulletAnimationCount = bulletAnimationCount + 1
 
             if bulletAnimationCount > 105:
                 bulletFired = False
         else:
-            screen.blit(player1, (player1X, player1Y))
+            screen.blit(player1, (player.x, player.y))
 
         for bullet in bulletList:
 
@@ -234,7 +229,7 @@ def main():
         
 
 
-        textsurface = myfont.render("score:"+str(score), False, (0, 0, 0))
+        textsurface = myfont.render("score:"+str(player.score), False, (0, 0, 0))
         screen.blit(textsurface,(0,0))
         
         pygame.display.update()
