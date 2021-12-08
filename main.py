@@ -37,34 +37,6 @@ class Bullet:
         self.damage = damage
         self.speed = speed
 
-class Base: 
-    def __init__(self, type, hp, speed):
-        self.type = type
-        self.hp = hp
-        self.speed = speed
-
-class Armour:
-    def __init__(self, type, hp):
-        self.type = type
-        self.hp = hp
-
-class Heal:
-    def __init__(type, self, hp):
-        self.type = type
-        self.hp = hp 
-    #Needs to be fixed (?): How to add/regen HP
-
-class Gun: 
-    def __init__(self, damage, ammo, delay):
-        self.damage = damage
-        self.ammo = ammo
-        self.delay = delay
-
-
-
-    
-
-
 def moveZombieByKeyboard(zombie:Zombie):
     pass
 
