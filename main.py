@@ -4,7 +4,9 @@ import random
 import math
 from GIFImage import GIFImage
 import Base
-import Zombie
+from Zombie import Zombie
+from ZombieType import ZombieType
+
 import Bullet
 import Gun
 import Armour
@@ -17,18 +19,22 @@ screen_height = 700
 playerSpeed = 6
 bulletSpeed = 5
 bulletDamage = 3
-zombieHP = 9
 score= 0
 
+z1 = ZombieType("zombie1", 3, 6, 1)
+z2 = ZombieType("zombie2", 9, 4, 3)
+z3 = ZombieType("Type 3", 12, 5, 5)
+z4 = ZombieType("Type 4", 16, 7, 10)
+z5 = ZombieType("Type Boss 1", 30, 6, 20)
+z6 = ZombieType("Type Boss 2", 45, 6, 30)
+z7 = ZombieType("Type Boss 3", 60, 5, 45)
+z8 = ZombieType("Type Mega Boss 1", 100, 5, 80)
+z9 = ZombieType("Type Mega Boss 2", 150, 4, 130)
+z10 = ZombieType("Type Heavy Boss 1", 300, 4, 280)
+z11 = ZombieType("Type Extreme Heavy Boss", 800, 3, 780)
+z12 = ZombieType("Type Fast Boss", 100, 6, 80)
 
-class Zombie:
-    def __init__(self, x, y, speed, hp):
-        self.x = x
-        self.y = y
-        self.hp=hp
-        self.speed = speed
-        self.isXForward = True
-        self.isYForward = True
+
 
 class Bullet:
     def __init__(self, x, y, speed, damage):
@@ -106,6 +112,8 @@ def main():
 
     zombie1Gif = GIFImage("zombie1.gif")
     zombie1Gif.set_scale(0.05)
+    zombie2Gif = GIFImage("zombie2.gif")
+    zombie2Gif.set_scale(0.2)
 
     player1Gif = GIFImage("LVL1 Archer Shooting.gif")
     player1Gif.set_scale(0.15)
@@ -127,7 +135,10 @@ def main():
 
     zombies = list()
     for i in range(0,4):
-        zombie = Zombie(screen_width+random.randint(0,100), random.randint(50,screen_height-100), random.randint(1,1), zombieHP )
+    
+        #def __init__(self, x, y, speed, hp):
+        #  type, hp, speed, money):
+        zombie = Zombie(z1, screen_width+random.randint(0,100), random.randint(50,screen_height-100))
         zombies.append(zombie)
     
 
@@ -157,7 +168,7 @@ def main():
 
         #move all the zombies automatically
         if len(zombies) < 5:
-            zombie = Zombie(screen_width+random.randint(0,100), random.randint(50,screen_height-100), random.randint(1,1), zombieHP )
+            zombie = Zombie(z2, screen_width+random.randint(0,100), random.randint(50,screen_height-100) )
             zombies.append(zombie)
 
 
@@ -167,7 +178,11 @@ def main():
                 score = score + 1
             else:    
                 moveZombieAuto(zombie)
-                printZombie(screen, zombie1Gif, zombie)
+                if zombie.zombieImageName == "zombie1":
+                    printZombie(screen, zombie1Gif, zombie)
+
+                if zombie.zombieImageName == "zombie2":
+                    printZombie(screen, zombie2Gif, zombie)
 
         #move a player character by keyboard
         keys=pygame.key.get_pressed()
