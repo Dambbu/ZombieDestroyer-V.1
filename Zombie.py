@@ -21,4 +21,4 @@ p12 = Zombie("Type Fast Boss", 100, 6, 80)
 
 instances = [p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12]
 for instance in instances: 
-    print(str(instance.type) + "," + instance.hp + "," + instance.speed + "," + instance.money)
+    print(str(instance.type) + "," + str(instance.hp) + "," + str(instance.speed) + "," + str(instance.money))

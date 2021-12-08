@@ -1,5 +1,4 @@
 # import the pygame module, so you can use it
-from typing import no_type_check
 import pygame
 import random
 import math

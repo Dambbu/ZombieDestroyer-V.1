@@ -8,8 +8,6 @@ p1 = Armour("Basic", 115)
 p2 = Armour("Noob", 130)
 p3 = Armour("Pro", 180)
 instances = [p1,p2,p3]
-for instance in instances: 
-    print(str(instance.type) + "," + instance.hp )
 
 
 

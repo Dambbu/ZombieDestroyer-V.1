@@ -1,4 +1,3 @@
-#Class Base
 class Base:
     def __init__(self, type, hp, speed):
         self.type = type
@@ -16,6 +15,6 @@ p8 = Base("The Viking", 200, 16)
 
 instances = [p1,p2,p3,p4,p5,p6,p7,p8]
 for instance in instances: 
-    print(str(instance.type) + "," + instance.hp + "," + instance.speed )
+    print(str(instance.type) + "," + str(instance.hp) + "," + str(instance.speed) )
 
 
