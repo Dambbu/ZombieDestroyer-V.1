@@ -132,7 +132,7 @@ def main():
     running = True
 
 
-    zombies = list()
+    zombies = []
     for i in range(0,4):
     
         #def __init__(self, x, y, speed, hp):
@@ -171,6 +171,7 @@ def main():
             if zombie.hp <= 0:
                 zombies.remove(zombie)
                 player.score = player.score + 1
+                player.coin= player.coin + zombie.coin
             else:    
                 moveZombieAuto(zombie)
                 if zombie.zombieImageName == "zombie1":
@@ -229,7 +230,7 @@ def main():
         
 
 
-        textsurface = myfont.render("score:"+str(player.score), False, (0, 0, 0))
+        textsurface = myfont.render("score:"+str(player.score) + " coin:" + str(player.coin), False, (0, 0, 0))
         screen.blit(textsurface,(0,0))
         
         pygame.display.update()
