@@ -45,17 +45,19 @@ class Bullet:
 def moveZombieByKeyboard(zombie:Zombie):
     pass
 
-def moveZombieAuto(zombie:Zombie, player:Player):
+def moveZombieAuto(zombie:Zombie):
     # modify X coordinate
     if zombie.x > screen_width - 100:
         zombie.isXForward = True
 
     if zombie.x < 0:
         zombie.x = screen_width + random.randint(0,100)
-        player.hp = player.hp - 1
 
     if zombie.isXForward == True:
         zombie.x = zombie.x - zombie.speed
+        if zombie.x < 10: 
+            player.hp = player.hp - zombie
+
 
     else:
         zombie.x = zombie.x + zombie.speed
@@ -175,7 +177,7 @@ def main():
                 player.score = player.score + 1
                 player.coin= player.coin + zombie.coin
             else:    
-                moveZombieAuto(zombie, player)
+                moveZombieAuto(zombie)
                 if zombie.zombieImageName == "zombie1":
                     printZombie(screen, zombie1Gif, zombie)
 
@@ -234,6 +236,7 @@ def main():
 
         textsurface = myfont.render("score:"+str(player.score) + " coin:" + str(player.coin) + "hp:" + str(player.hp), False, (0, 0, 0))
         screen.blit(textsurface,(0,0))
+
         
         pygame.display.update()
      
