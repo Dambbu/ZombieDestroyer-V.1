@@ -1,4 +1,5 @@
 # import the pygame module, so you can use it
+import sys
 import pygame
 import random
 import math
@@ -243,8 +244,7 @@ def main():
 
         
         if player.hp < 0:
-            import sys
-            sys.exit
+            sys.exit()
      
 # run the main function only if this module is executed as the main script
 # (if you import this as a module then nothing is executed)
