@@ -11,7 +11,6 @@ class Zombie:
         self.coin = zombieType.money
         self.isXForward = True
         self.isYForward = True
+        self.damage = zombieType.damage
 
-
-        self.hp = self.hp - 1
         
