@@ -45,7 +45,7 @@ class Bullet:
 def moveZombieByKeyboard(zombie:Zombie):
     pass
 
-def moveZombieAuto(zombie:Zombie):
+def moveZombieAuto(zombie:Zombie, player:Player):
     # modify X coordinate
     if zombie.x > screen_width - 100:
         zombie.isXForward = True
@@ -56,7 +56,7 @@ def moveZombieAuto(zombie:Zombie):
     if zombie.isXForward == True:
         zombie.x = zombie.x - zombie.speed
         if zombie.x < 10: 
-            player.hp = player.hp - zombie
+            player.hp = player.hp - 1
 
 
     else:
@@ -177,7 +177,7 @@ def main():
                 player.score = player.score + 1
                 player.coin= player.coin + zombie.coin
             else:    
-                moveZombieAuto(zombie)
+                moveZombieAuto(zombie, player)
                 if zombie.zombieImageName == "zombie1":
                     printZombie(screen, zombie1Gif, zombie)
 
