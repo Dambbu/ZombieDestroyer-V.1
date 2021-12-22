@@ -232,14 +232,19 @@ def main():
                 if bullet.x > screen_width:
                     bulletList.remove(bullet)
         
-
+        
+            
 
         textsurface = myfont.render("score:"+str(player.score) + " coin:" + str(player.coin) + "hp:" + str(player.hp), False, (0, 0, 0))
         screen.blit(textsurface,(0,0))
 
         
         pygame.display.update()
-     
+
+        
+        if player.hp < 0:
+            import sys
+            sys.exit
      
 # run the main function only if this module is executed as the main script
 # (if you import this as a module then nothing is executed)
