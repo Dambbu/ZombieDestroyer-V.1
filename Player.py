@@ -6,5 +6,4 @@ class Player:
         self.x = 0
         self.y = 0
 
-        import Zombie
 

@@ -1,3 +1,4 @@
+from Gun import Gun
 from ZombieType import ZombieType
 
 class Zombie:
@@ -10,3 +11,7 @@ class Zombie:
         self.coin = zombieType.money
         self.isXForward = True
         self.isYForward = True
+
+
+        self.hp = self.hp - 1
+        
