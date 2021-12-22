@@ -4,3 +4,4 @@ class ZombieType():
         self.speed = speed
         self.hp = hp
         self.money = money
+    

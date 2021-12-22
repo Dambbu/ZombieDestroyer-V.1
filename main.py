@@ -91,8 +91,22 @@ def checkCollision(bullet:Bullet, zombies:list[Zombie]):
             return True
 
     return False
-    
-        
+
+
+def drawBackground(backgroundNo, screen):
+
+    if backgroundNo == 0:
+        bg = pygame.image.load("bg.jpeg").convert()
+        bg = pygame.transform.scale(bg, (screen_width, screen_height))
+    elif backgroundNo == 1:
+        bg = pygame.image.load("bg2.png").convert()
+        bg = pygame.transform.scale(bg, (screen_width, screen_height))
+    else:
+        bg = pygame.image.load("bg3.png").convert()
+        bg = pygame.transform.scale(bg, (screen_width, screen_height))
+
+    screen.blit(bg, (0,0))
+
     
 # define a main function
 def main():
@@ -102,8 +116,6 @@ def main():
     # initialize the pygame module
     pygame.init()
     # load and set the logo
-    bg = pygame.image.load("bg.jpeg")
-    bg = pygame.transform.scale(bg, (screen_width, screen_height))
 
     player1 = pygame.image.load("LVL1 Archer Shooting.gif")
     player1 = pygame.transform.scale(player1, (150, 80))
@@ -150,6 +162,7 @@ def main():
     bulletFired = False
     bulletAnimationCount = 0
 
+    backgroundNo = random.randint(0,2)
     # main loop
     while running:
 
@@ -164,8 +177,8 @@ def main():
             elif event.type == pygame.KEYDOWN:
                 keypressed = True
 
-        screen.blit(bg, (0,0))
-
+        drawBackground(backgroundNo, screen)
+        
         #move all the zombies automatically
         if len(zombies) < 5:
             zombie = Zombie(z2, screen_width+random.randint(0,100), random.randint(50,screen_height-100) )

@@ -52,18 +52,18 @@ See Damage increase at ##Zombies.
 ### Zombies
 ## Boses: Bosses per levles (30 hp), +1 per 5 levels
 ## Zombie Types: 
-# Type 1 (µ1): 3 Hp, 6 Speed
-# Type 2 (µ3): 9 Hp, 4 Speed
-# Type 3 (µ5): 12 Hp, 5 Speed
-# Type 4 (µ10): 16 Hp, 7 Speed
-# Type Boss 1 (µ20): 30 Hp, 6 Speed
-# Type Boss 2 (µ30): 45 Hp, 6 Speed
-# Type Boss 3 (µ45): 60 Hp, 5 Speed
-# Type Mega Boss 1 (µ80): 100 Hp, 5 Speed
-# Type Mega Boss 2 (µ130): 150 Hp, 4 Speed
-# Type Heavy Boss 1 (µ280): 300 Hp, 4 Speed
-# Type Extreme Heavy Boss 1 (µ780): 800 Hp , 3 Speed
-# Type Fast Boss 1 (µ80): 100 hp, 6 Speed
+# Type 1 (µ1): 3 Hp, 6 Speed, 2 Damage
+# Type 2 (µ3): 9 Hp, 4 Speed, 3 Damage
+# Type 3 (µ5): 12 Hp, 5 Speed, 5 Damage
+# Type 4 (µ10): 16 Hp, 7 Speed, 8 Damage
+# Type Boss 1 (µ20): 30 Hp, 6 Speed, 10 Damage
+# Type Boss 2 (µ30): 45 Hp, 6 Speed, 12 Damage
+# Type Boss 3 (µ45): 60 Hp, 5 Speed, 20 Damage
+# Type Mega Boss 1 (µ80): 100 Hp, 5 Speed, 30 Damage
+# Type Mega Boss 2 (µ130): 150 Hp, 4 Speed, 80 Damage
+# Type Heavy Boss 1 (µ280): 300 Hp, 4 Speed, 120 Damage
+# Type Extreme Heavy Boss 1 (µ780): 800 Hp , 3 Speed, 180 Damage
+# Type Fast Boss 1 (µ80): 100 hp, 6 Speed, 100 Damage
 # Lvl 1: T1 (20)
 # Lvl 2: T1 (15), T2 (5)
 # Lvl 3: T1 (15), T2 (10), T3 (5), T4 (1)
