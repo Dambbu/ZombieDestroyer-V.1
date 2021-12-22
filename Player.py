@@ -5,3 +5,6 @@ class Player:
         self.hp = 50
         self.x = 0
         self.y = 0
+
+        import Zombie
+
