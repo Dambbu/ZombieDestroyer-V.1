@@ -16,7 +16,7 @@ See Damage increase at ##Zombies.
 # After Levels: Forever, +5 Zombies per level (µ1 per zombie for the first 10 Lvls, then µ2 for the next ten, so on.). +1 Boss per level. Shop will be avilable
 ### Shop
 ** Shop can be accessed after Lvl. 3 is completed. 
-# A Begginers Guide (µ30): You don't have to come back to this instructions page. Buy this and have it on the side all the time!
+# (K) A Begginers Guide (µ30): You don't have to come back to this instructions page. Buy this and have it on the side all the time!
 ## Guns: 
 # (1) The M1 Garade (µ55): The Beginner's Gun. 5 Dmg per shot, 3 Ammo (∞). 3 Sec Reload. 
 # (2) The Thompson Machine Gun " The Drumstik" (µ70): A Noob's Machine Gun. Shoots very fast, but not accurately. 3 Dmg per shot, 20 Ammo (∞). 14 Sec Reload. 
