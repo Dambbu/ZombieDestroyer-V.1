@@ -21,18 +21,18 @@ playerSpeed = 6
 bulletSpeed = 5
 bulletDamage = 3
 
-z1 = ZombieType("zombie1", 3, 6, 1)
-z2 = ZombieType("zombie2", 9, 4, 3)
-z3 = ZombieType("Type 3", 12, 5, 5)
-z4 = ZombieType("Type 4", 16, 7, 10)
-z5 = ZombieType("Type Boss 1", 30, 6, 20)
-z6 = ZombieType("Type Boss 2", 45, 6, 30)
-z7 = ZombieType("Type Boss 3", 60, 5, 45)
-z8 = ZombieType("Type Mega Boss 1", 100, 5, 80)
-z9 = ZombieType("Type Mega Boss 2", 150, 4, 130)
-z10 = ZombieType("Type Heavy Boss 1", 300, 4, 280)
-z11 = ZombieType("Type Extreme Heavy Boss", 800, 3, 780)
-z12 = ZombieType("Type Fast Boss", 100, 6, 80)
+z1 = ZombieType("zombie1", 3, 6, 1, 1)
+z2 = ZombieType("zombie2", 9, 4, 3, 2)
+z3 = ZombieType("Type 3", 12, 5, 5, 3)
+z4 = ZombieType("Type 4", 16, 7, 10, 4)
+z5 = ZombieType("Type Boss 1", 30, 6, 20, 5)
+z6 = ZombieType("Type Boss 2", 45, 6, 30, 6)
+z7 = ZombieType("Type Boss 3", 60, 5, 45, 7)
+z8 = ZombieType("Type Mega Boss 1", 100, 5, 80, 8)
+z9 = ZombieType("Type Mega Boss 2", 150, 4, 130, 9)
+z10 = ZombieType("Type Heavy Boss 1", 300, 4, 280, 10)
+z11 = ZombieType("Type Extreme Heavy Boss", 800, 3, 780, 11)
+z12 = ZombieType("Type Fast Boss", 100, 6, 80, 12)
 
 
 
@@ -51,13 +51,11 @@ def moveZombieAuto(zombie:Zombie, player:Player):
     if zombie.x > screen_width - 100:
         zombie.isXForward = True
 
-    if zombie.x < 0:
-        zombie.x = screen_width + random.randint(0,100)
-
     if zombie.isXForward == True:
         zombie.x = zombie.x - zombie.speed
-        if zombie.x < 10: 
-            player.hp = player.hp - 1
+        if zombie.x < 5: 
+            player.hp = player.hp - zombie.damage
+            zombie.x = screen_width + random.randint(0,100)
 
 
     else:
