@@ -13,7 +13,6 @@ See Damage increase at ##Zombies.
 # Lvl 1: Character will be Archer (Long range). Total Available Coins: µ15       Total Zombies: 15
 # Lvl 2: Character will be Mace Man (Fast Moving Melee Tank). Total Available Coins: µ25  Total Zombies: 25
 # Lvl 3: Character will be Handgunner (Fast, Accurate Beginner Berserker). Total Available Coins: µ45 Total Zombies: 45
-# After Levels: Forever, +5 Zombies per level (µ1 per zombie for the first 10 Lvls, then µ2 for the next ten, so on.). +1 Boss per level. Shop will be avilable
 ### Shop
 ** Shop can be accessed after Lvl. 3 is completed. 
 # (K) A Begginers Guide (µ30): You don't have to come back to this instructions page. Buy this and have it on the side all the time!
@@ -29,11 +28,11 @@ See Damage increase at ##Zombies.
 # (0) Rocket Launcher (µ20): 3
 # (L) The Lazer (µ30): 2
 # (O) The Ailenator (µ50): 15
-## Healing Items (Basic Base HP: 100 {See ###Base (Player skin changes for every base) for more info.})
+## Healing Items (Basic Base HP: 50 {See ###Base (Player skin changes for every base) for more info.})
 # (P) Cann of HP (µ30): +15 HP
 # (I) Bucket of HP (µ70): +30 HP
 # (O) Med-Pack (µ100): +60 HP
-# (U) Potion of Healing: +100 HP
+# (U) Potion of Healing (µ150): +100 HP
 ## Armour
 # (Z) Basic Set of Armour (µ80): +15 HP
 # (X) Noob's Set of Armour (µ100): +30 HP
@@ -41,13 +40,13 @@ See Damage increase at ##Zombies.
 
 ### Base (Player Skin changes for every single base!)
 # (V) The Craker (µ90): 105 HP, 8 Speed
-# (B) The Ninja (µ100): 110 HP, 9 Speed
+# (B) The Ninja (µ100): 85 HP, 20 Speed
 # (N) The Warrior (µ130): 115 HP, 8 Speed
 # (M) The Magician (µ150): 120 HP, 10 Speed
 # (J) The Berserker (µ200): 135 HP, 11 Speed
-# (K) Kamakazier (µ300): 150 HP, 14 Speed
+# (K) Kamakazier (µ300): 150 HP, 25 Speed
 # (L) The Tank (µ350): 175 HP, 4 Speed
-# (Q) The Viking (µ400): 200 HP, 16 Speed
+# (Q) The Viking (µ400): 200 HP, 40 Speed
 
 ### Zombies
 ## Boses: Bosses per levles (30 hp), +1 per 5 levels
@@ -77,12 +76,6 @@ See Damage increase at ##Zombies.
 #   TB3: +1 Per 10 lvls
 #   TMB1: +1 15 lvls
 #   TMB2: +2 18 lvls
-#   THB1: +1 
+#   THB1: +1 19 lvls
 #   TEHB1: +1 20 lvls
 #   TFB1: +1 13 lvls
-
-
-
-Roles: 
-Joshua: Guns, Healing Items, Bullets
-Joonseo: Zombies(money), Base, Armour
