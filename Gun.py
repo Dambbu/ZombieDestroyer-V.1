@@ -14,3 +14,14 @@ gun6 = Gun(100,1, 13000)
 gun7 = Gun(150, 10, 14000)
 
 instances = [gun1,gun2,gun3,gun4,gun5,gun6,gun7]
+
+
+
+
+class Level:
+    def __init__(self, threshold):
+        self.threshold = threshold
+    
+    level1 = Level(20)
+    level2 = Level(50)
+       
