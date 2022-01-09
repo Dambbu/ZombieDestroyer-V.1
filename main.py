@@ -12,7 +12,8 @@ import Bullet
 import Gun
 import Armour
 import Heal
-import Guide
+from Gun import Level
+
 from pygame.constants import KEYDOWN
 #Game Control until we have the code to control bullet damage and reload/speed per gun and Gif. 
 screen_width = 1200
