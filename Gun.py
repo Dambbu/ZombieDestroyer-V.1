@@ -1,3 +1,5 @@
+
+
 class Gun:
     def __init__(self, damage, ammo, delay):
         self.damage = damage
@@ -21,7 +23,3 @@ instances = [gun1,gun2,gun3,gun4,gun5,gun6,gun7]
 class Level:
     def __init__(self, threshold):
         self.threshold = threshold
-    
-    level1 = Level(20)
-    level2 = Level(50)
-       
