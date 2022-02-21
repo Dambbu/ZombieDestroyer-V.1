@@ -162,6 +162,12 @@ def main():
     bulletAnimationCount = 0
 
     backgroundNo = random.randint(0,2)
+    showGuideFlag = False
+
+    readmeText = ""
+    with open('README.md') as f:
+        readmeText = f.readlines()
+    
     # main loop
     while running:
 
@@ -207,6 +213,12 @@ def main():
             player.y = player.y - playerSpeed
         if keys[pygame.K_DOWN]:
             player.y = player.y + playerSpeed
+        if keys[pygame.K_k]:
+            if showGuideFlag == False:
+                showGuideFlag = True
+            else:
+                showGuideFlag = False
+
         if player.x < 0:
             player.x = 0
         if player.x > screen_width - 80:
@@ -249,6 +261,11 @@ def main():
             
 
         textsurface = myfont.render("score:"+str(player.score) + " coin:" + str(player.coin) + "hp:" + str(player.hp), False, (0, 0, 0))
+
+        if showGuideFlag == True:
+            label = myfont.render("".join(readmeText), False, (0, 0, 0))
+            screen.blit(label, (100, 100))
+
         screen.blit(textsurface,(0,0))
 
         
